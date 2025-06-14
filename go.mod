@@ -1,8 +1,9 @@
-module github.com/contiamo/openapi-generator-go/v2
+module github.com/rkoshy/openapi-generator-go/v2
 
 go 1.19
 
 require (
+	github.com/contiamo/openapi-generator-go/v2 v2.1.3
 	github.com/getkin/kin-openapi v0.89.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/mapstructure v1.5.0
