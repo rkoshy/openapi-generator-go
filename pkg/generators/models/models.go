@@ -16,7 +16,7 @@ import (
 	"golang.org/x/exp/maps"
 	"golang.org/x/exp/slices"
 
-	tpl "github.com/contiamo/openapi-generator-go/v2/pkg/generators/templates"
+	tpl "github.com/rkoshy/openapi-generator-go/v2/pkg/generators/templates"
 )
 
 // ExtensionPatternError is an extension property that, if set, allows the API author
@@ -625,8 +625,8 @@ func structPropsFromRef(ref *openapi3.SchemaRef) (specs []PropSpec, imports map[
 		spec.IsPtr = prop.Value.Nullable && !(spec.IsMap || spec.IsArray) && (!spec.IsEnum || spec.IsEnumWithNil)
 		spec.IsString = spec.IsString && !spec.IsEnum
 
-		if spec.GoType == "iso8601timestamp.ISO8601Timestamp" {
-			imports["time"] = "git.p28.tech/go-libs/common/iso8601timestamp"
+		if spec.GoType == "iso8601timestamp.ISO8601Timestamp" || spec.GoType == "*iso8601timestamp.ISO8601Timestamp" {
+			imports["git.p28.tech/go-libs/common/iso8601timestamp"] = ""
 		}
 
 		omit := ""
@@ -787,7 +787,7 @@ func fillValidationSpec(ref *openapi3.SchemaRef, spec *ValidationSpec, goType st
 		spec.NeedsValidation = true
 		spec.IsDateTime = true
 		if ref.Ref == "" {
-			imports["time"] = "git.p28.tech/go-libs/common/iso8601timestamp"
+			imports["git.p28.tech/go-libs/common/iso8601timestamp"] = ""
 		}
 
 	case "byte":

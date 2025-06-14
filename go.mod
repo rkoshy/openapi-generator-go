@@ -1,10 +1,12 @@
 module github.com/rkoshy/openapi-generator-go/v2
 
-go 1.19
+go 1.22
+
+toolchain go1.23.1
 
 require (
-	github.com/contiamo/openapi-generator-go/v2 v2.1.3
 	github.com/getkin/kin-openapi v0.89.0
+	github.com/go-ozzo/ozzo-validation/v4 v4.3.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/pkg/errors v0.9.1
@@ -20,6 +22,7 @@ require (
 )
 
 require (
+	github.com/asaskevich/govalidator v0.0.0-20200108200545-475eaeb16496 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/ghodss/yaml v1.0.0 // indirect
@@ -40,9 +43,8 @@ require (
 	github.com/spf13/afero v1.11.0 // indirect
 	github.com/spf13/cast v1.6.0 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
-	go.uber.org/atomic v1.9.0 // indirect
-	go.uber.org/multierr v1.9.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	go.uber.org/multierr v1.10.0 // indirect
+	golang.org/x/sys v0.29.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 )

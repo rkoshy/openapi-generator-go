@@ -1,7 +1,7 @@
 openapi-generator-go
 ====================
 
-![test](https://github.com/contiamo/openapi-generator-go/workflows/test/badge.svg)
+![test](https://github.com/rkoshy/openapi-generator-go/workflows/test/badge.svg)
 
 Generate go code from an openapi spec!
 

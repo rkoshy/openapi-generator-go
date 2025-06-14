@@ -4,7 +4,7 @@ import (
 	"embed"
 	"text/template"
 
-	tpl "github.com/contiamo/openapi-generator-go/v2/pkg/generators/templates"
+	tpl "github.com/rkoshy/openapi-generator-go/v2/pkg/generators/templates"
 )
 
 var (

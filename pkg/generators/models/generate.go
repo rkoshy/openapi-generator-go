@@ -15,7 +15,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog"
 
-	tpl "github.com/contiamo/openapi-generator-go/v2/pkg/generators/templates"
+	tpl "github.com/rkoshy/openapi-generator-go/v2/pkg/generators/templates"
 )
 
 // DefaultPackageName used in the models source code

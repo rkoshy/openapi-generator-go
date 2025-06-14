@@ -1,4 +1,4 @@
-module github.com/contiamo/openapi-generator-go/pkg/generators/models/testdata
+module github.com/rkoshy/openapi-generator-go/pkg/generators/models/testdata
 
 go 1.16
 
