@@ -625,8 +625,8 @@ func structPropsFromRef(ref *openapi3.SchemaRef) (specs []PropSpec, imports map[
 		spec.IsPtr = prop.Value.Nullable && !(spec.IsMap || spec.IsArray) && (!spec.IsEnum || spec.IsEnumWithNil)
 		spec.IsString = spec.IsString && !spec.IsEnum
 
-		if spec.GoType == "time.Time" || spec.GoType == "*time.Time" {
-			imports["time"] = ""
+		if spec.GoType == "iso8601timestamp.ISO8601Timestamp" || spec.GoType == "*time.Time" {
+			imports["time"] = "git.p28.tech/go-libs/common/iso8601timestamp"
 		}
 
 		omit := ""

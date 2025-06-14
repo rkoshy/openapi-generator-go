@@ -40,7 +40,7 @@ func goTypeFromSpec(schemaRef *openapi3.SchemaRef) string {
 
 	case "string":
 		if schema.Format == "date-time" || schema.Format == "time" {
-			propertyType = "time.Time"
+			propertyType = "iso8601timestamp.ISO8601Timestamp"
 		}
 		if len(schema.Enum) > 0 && schemaRef.Ref != "" {
 			propertyType = filepath.Base(schemaRef.Ref)
