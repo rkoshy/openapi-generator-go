@@ -36,7 +36,7 @@ func (v {{.Name}}) Validate() error {
 		{{- if .HasMax }}validation.Max({{ .GoType }}({{ .Max }})),{{ end }}
 		{{- if or .HasMinLength .HasMaxLength }}validation.Length({{ .MinLength }},{{ .MaxLength }}),{{ end }}
 		{{- if .IsDate }}validation.Date("2006-01-02"),{{ end }}
-		{{- if .IsDateTime }}validation.Date(time.RFC3339),{{ end }}
+		{{- if .IsDateTime }}validation.Date("2006-01-02T15:04:05.000-0700"),{{ end }}
 		{{- if .IsBase64 }}is.Base64,{{ end }}
 		{{- if .IsEmail }}is.EmailFormat,{{ end }}
 		{{- if .IsUUID }}is.UUID,{{ end }}

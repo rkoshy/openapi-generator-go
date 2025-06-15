@@ -36,7 +36,7 @@ type Connection struct {
 func (m Connection) Validate() error {
 	return validation.Errors{
 		"createdAt": validation.Validate(
-			m.CreatedAt, validation.Required, validation.Date(time.RFC3339),
+			m.CreatedAt, validation.Required, validation.Date("2006-01-02T15:04:05.000-0700"),
 		),
 		"id": validation.Validate(
 			m.Id, validation.Required, is.UUID,
@@ -51,7 +51,7 @@ func (m Connection) Validate() error {
 			m.Technology, validation.Required,
 		),
 		"updatedAt": validation.Validate(
-			m.UpdatedAt, validation.Required, validation.Date(time.RFC3339),
+			m.UpdatedAt, validation.Required, validation.Date("2006-01-02T15:04:05.000-0700"),
 		),
 	}.Filter()
 }

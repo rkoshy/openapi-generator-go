@@ -136,7 +136,7 @@ func (m {{$modelPropertiesName}}) Validate() error {
 						{{- if or .HasMinItems .HasMaxItems }}validation.Length({{ .MinItems }},{{ .MaxItems }}),{{ end }}
 						{{- if or .HasMinProps .HasMaxProps }}validation.Length({{ .MinProps }},{{ .MaxProps }}),{{ end }}
 						{{- if .IsDate }}validation.Date("2006-01-02"),{{ end }}
-						{{- if .IsDateTime }}validation.Date(time.RFC3339),{{ end }}
+						{{- if .IsDateTime }}validation.Date("2006-01-02T15:04:05.000-0700"),{{ end }}
 						{{- if .IsBase64 }}is.Base64,{{ end }}
 						{{- if .IsEmail }}is.EmailFormat,{{ end }}
 						{{- if .IsUUID }}is.UUID,{{ end }}

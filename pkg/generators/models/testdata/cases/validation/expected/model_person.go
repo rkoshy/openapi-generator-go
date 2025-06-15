@@ -84,7 +84,7 @@ func (m Person) Validate() error {
 			m.Date, validation.Date("2006-01-02"),
 		),
 		"datetime": validation.Validate(
-			m.Datetime, validation.Date(time.RFC3339),
+			m.Datetime, validation.Date("2006-01-02T15:04:05.000-0700"),
 		),
 		"email": validation.Validate(
 			m.Email, is.EmailFormat,
